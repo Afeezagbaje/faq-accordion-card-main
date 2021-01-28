@@ -1,7 +1,14 @@
-const quetions = document.querySelectorAll(".question")
+const questions = document.querySelectorAll(".question")
 
-for(let question of quetions){
+for(let question of questions){
     question.addEventListener('click',() => {
-        question.classList.toggle("open")
+        if(question.classList.contains("open")){
+            question.classList.toggle("open")
+        }else{
+           for(let question of questions){
+                question.classList.remove("open")
+           } 
+           question.classList.add("open")
+        }
     })
 }
