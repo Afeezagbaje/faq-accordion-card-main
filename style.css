@@ -19,7 +19,7 @@ body {
     width: 400px;
     max-height: 650px;
     background: white;
-    margin: 150px auto;
+    margin: 100px auto;
     padding: 1rem 2rem 100px;
     border-radius: 30px;
     position: relative;
@@ -36,6 +36,7 @@ body {
 .faq_questions {
     color: hsl(237, 12%, 33%);
     line-height: 2;
+    margin-top: -110px;
 }
 
 .faq_question {
@@ -82,15 +83,48 @@ body {
 }
 
 #woman {
-    background-image: url(images/illustration-woman-online-mobile.svg);
+    background-image: url(images/illustration-woman-online-desktop.svg);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 250px;
     width: 400px;
-    height: 200px;
-    margin-top: -127px;
-    margin-left: -47px;
+    height: 400px;
+    margin-top: -235px;
+    margin-left: -33px;
 }
 
+#box {
+    background-image: url(images/illustration-box-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 110px;
+    width: 400px;
+    height: 400px;
+    margin-top: -360px;
+    margin-left: -115px;
+    animation: movingbox 7s linear infinite alternate;
+}
+
+@keyframes movingbox {
+    0%{
+        transform: translateX(0px);
+    }
+    20% {
+        transform: translateX(-5px);
+    }
+    40% {
+        transform: translateX(2.5px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+    80% {
+        transform: translateY(-2.5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
 
 /* @media (min-width: 600px){
     #mobile_woman {
