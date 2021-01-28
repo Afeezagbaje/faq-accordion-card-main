@@ -74,6 +74,7 @@ body {
 
 .open .faq_answers {
     display: block;
+    line-height: 1;
     padding-bottom: 20px;
     color: hsl(240, 6%, 50%);
 }
@@ -93,6 +94,12 @@ body {
     margin-left: -33px;
 }
 
+.faq_questions {
+    color: hsl(237, 12%, 33%);
+    line-height: 2;
+    margin-top: -110px;
+}
+
 #box {
     background-image: url(images/illustration-box-desktop.svg);
     background-position: center;
@@ -102,73 +109,64 @@ body {
     height: 400px;
     margin-top: -360px;
     margin-left: -115px;
-    animation: movingbox 7s linear infinite alternate;
+    animation: movingbox 15s linear infinite alternate;
 }
 
 @keyframes movingbox {
     0%{
         transform: translateX(0px);
     }
-    20% {
-        transform: translateX(-5px);
+    25% {
+        transform: translateX(-7px);
     }
-    40% {
-        transform: translateX(2.5px);
+    50% {
+        transform: translateX(7px);
     }
-    60% {
-        transform: translateY(-5px);
-    }
-    80% {
-        transform: translateY(-2.5px);
+    75% {
+        transform: translateY(-7px);
     }
     100% {
-        transform: translateY(0px);
+        transform: translateY(-7px);
     }
 }
 
-/* @media (min-width: 600px){
-    #mobile_woman {
-        display: none;
-    }
-
-    #bottom_mobile {
-      display: none;
-    }
-
-    #desktop_woman {
-        display: block;
-    }
-
-    #bottom_desktop {
-        display: block;
-    }
-
-    #box {
-        display: block;
-    }
-    
+@media (min-width: 800px){
     .faq_container {
-        width: 80%;
-        background: white;
-        margin: 100px auto 100px;
-        padding: 30px;
-        border-radius: 30px;
-        position: relative;
-        display: flex;
-        justify-content: flex-end;
+        width: 900px;
+        max-height: 550px;
+        margin: 50px auto;
+        background-image: url(images/bg-pattern-desktop.svg);
+        background-position: -550px -300px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        justify-content: center;
     }
 
     .faq_questions {
-        color: hsl(237, 12%, 33%);
-        line-height: 2.5;
-        width: 50%;
-        margin-bottom: 50px;
-        justify-self: flex-end;
+        margin-top: 0px;
     }
 
     .faq_title {
-        text-align: left;
-        font-size: 2.5rem;
+        text-align: justify;
     }
 
-} */
+    .question_container {
+        width: 350px;
+    }
+
+    #woman {
+        background-position: 110% center;
+        background-size: auto;
+        width: 400px;
+        height: 400px;
+        margin-top: 30px;
+        margin-left: -32px;
+    }
+
+    #box {
+        background-size: auto;
+        margin-top: -350px;
+        margin-left: -230px;
+    }
+}
